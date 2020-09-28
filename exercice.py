@@ -5,7 +5,11 @@
 def order(values: list = None) -> bool:
     if values is None:
         # TODO: Demander les valeurs ici
-        pass
+        while len(values) != 10:
+            values.append(input('enter value'))
+        values2 = values[:]
+        return values2.sort() == values
+       
 
     return False
 
