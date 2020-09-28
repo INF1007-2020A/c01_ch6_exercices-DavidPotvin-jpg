@@ -14,11 +14,7 @@ def order(values: list = None) -> bool:
 def anagrams(words: list = None) -> bool:
     if words is None:
         # TODO: Demander les mots ici
-        mot1 = list(input("Enter the first word : ")).sort()
-        mot2 = list(input("Enter the second word : ")).sort()
-        if mot1 == mot2:
-            return True
-
+        return sorted(list(input("Enter the first word : "))) == sorted(list(input("Enter the second word : ")))
     return False
 
 
