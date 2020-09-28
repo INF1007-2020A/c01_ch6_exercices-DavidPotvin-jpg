@@ -13,18 +13,29 @@ def order(values: list = None) -> bool:
 def anagrams(words: list = None) -> bool:
     if words is None:
         # TODO: Demander les mots ici
-        pass
+        mot1 = list(input("Enter the first word : ")).sort()
+        mot2 = list(input("Enter the second word : ")).sort()
+        if mot1 == mot2:
+            return True
 
     return False
 
 
 def contains_doubles(items: list) -> bool:
-    return False
-
+    return len(items) != len(set(items))
 
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
-    return {}
+    max_sum = 0
+    best_student = ''
+    best_average = 0.0
+    for student, notes in student_grades:
+        print(student, notes)
+        # if sum(notes) > max_sum:
+        #     max_sum = sum(notes)
+        #     best_student = student
+        #     best_average = sum(notes)/len(notes)
+    return {best_student : best_average}
 
 
 def histogram(sentence: str) -> tuple:
@@ -36,13 +47,19 @@ def histogram(sentence: str) -> tuple:
 
 
 def get_recipes():
-    # TODO: Demander le nom d'une recette, puis ses ingrédients et enregistrer dans une structure de données 
-    pass
+    # TODO: Demander le nom d'une recette, puis ses ingrédients et enregistrer dans une structure de données
+    nom_recette = input("Enter the name of the recipe : ")
+    ingredients = input("Quels ingredient contient la recette ? : ")
+    return {nom_recette: ingredients}
 
 
 def print_recipe(ingredients) -> None:
     # TODO: Demander le nom d'une recette, puis l'afficher si elle existe
-    pass
+    nom_recette = input("Enter the name of the recipe : ")
+    if nom_recette in ingredients:
+        print(f"{nom_recette} contient {ingredients[nom_recette]}")
+
+
 
 
 def main() -> None:
@@ -56,8 +73,8 @@ def main() -> None:
     print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
 
     grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
-    name, result = best_grades(grades)
-    print(f"{name} a la meilleure moyenne: {result}")
+    #name, result = best_grades(grades)
+    #print(f"{name} a la meilleure moyenne: {result}")
     
     print("On enregistre les recettes...")
     recipes = get_recipes()
