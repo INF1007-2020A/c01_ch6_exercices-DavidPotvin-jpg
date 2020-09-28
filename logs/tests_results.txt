@@ -12,7 +12,7 @@ Traceback (most recent call last):
     output = [exercice.best_grades(v) for v in values]
   File "test_exercice.py", line 63, in <listcomp>
     output = [exercice.best_grades(v) for v in values]
-  File "/home/runner/work/c01_ch6_exercices-DavidPotvin-jpg/c01_ch6_exercices-DavidPotvin-jpg/exercice.py", line 32, in best_grades
+  File "/home/runner/work/c01_ch6_exercices-DavidPotvin-jpg/c01_ch6_exercices-DavidPotvin-jpg/exercice.py", line 36, in best_grades
     for student, notes in student_grades:
 ValueError: too many values to unpack (expected 2)
 
