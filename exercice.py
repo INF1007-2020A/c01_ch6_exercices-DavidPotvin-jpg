@@ -25,18 +25,18 @@ def anagrams(words: list = None) -> bool:
 def contains_doubles(items: list) -> bool:
     return len(items) != len(set(items))
 
-def best_grades(student_grades: dict) -> dict:
+def best_grades(student_grades: dict) -> tuple:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
     max_sum = 0
     best_student = ''
     best_average = 0.0
     for student, notes in student_grades:
         print(student, notes)
-        # if sum(notes) > max_sum:
-        #     max_sum = sum(notes)
-        #     best_student = student
-        #     best_average = sum(notes)/len(notes)
-    return {best_student : best_average}
+        if sum(notes) > max_sum:
+            max_sum = sum(notes)
+            best_student = student
+            best_average = sum(notes)/len(notes)
+    return (best_student, best_average)
 
 
 def histogram(sentence: str) -> tuple:
@@ -74,7 +74,7 @@ def main() -> None:
     print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
 
     grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
-    #name, result = best_grades(grades)
+    name, result = best_grades(grades)
     #print(f"{name} a la meilleure moyenne: {result}")
     
     print("On enregistre les recettes...")
