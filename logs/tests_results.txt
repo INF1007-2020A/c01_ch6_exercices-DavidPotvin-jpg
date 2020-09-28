@@ -12,7 +12,7 @@ Traceback (most recent call last):
     output = [exercice.best_grades(v) for v in values]
   File "test_exercice.py", line 63, in <listcomp>
     output = [exercice.best_grades(v) for v in values]
-  File "/home/runner/work/c01_ch6_exercices-DavidPotvin-jpg/c01_ch6_exercices-DavidPotvin-jpg/exercice.py", line 36, in best_grades
+  File "/home/runner/work/c01_ch6_exercices-DavidPotvin-jpg/c01_ch6_exercices-DavidPotvin-jpg/exercice.py", line 33, in best_grades
     for student, notes in student_grades:
 ValueError: too many values to unpack (expected 2)
 
@@ -55,6 +55,6 @@ False
 + [[-2, 1, 6, 9], ['2', 'a', 'hello']] : Mauvais ordre
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.002s
 
 FAILED (failures=3, errors=1)
